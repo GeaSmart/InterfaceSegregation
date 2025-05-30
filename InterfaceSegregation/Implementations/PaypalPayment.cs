@@ -2,15 +2,15 @@
 
 namespace InterfaceSegregation.Implementations;
 
-public class CashPayment : IPaymentProcessor
+public class PaypalPayment : IPaymentProcessor
 {
     public void ProcessCashPayment(decimal amount)
     {
-        Console.WriteLine("Pago en efectivo procesado.");
+        throw new NotImplementedException();
     }
 
     public void ProcessPaypalPayment(decimal amount)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Pago vía paypal procesado.");
     }
 }
