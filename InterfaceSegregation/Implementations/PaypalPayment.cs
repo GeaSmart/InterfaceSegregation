@@ -13,4 +13,14 @@ public class PaypalPayment : IPaymentProcessor
     {
         Console.WriteLine("Pago vía paypal procesado.");
     }
+
+    public void ProcessCreditCardPayment(decimal amount)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void validateCreditCard(string cardNumber)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -2,11 +2,11 @@
 
 namespace InterfaceSegregation.Implementations;
 
-public class CashPayment : IPaymentProcessor
+public class CreditCardPayment : IPaymentProcessor
 {
     public void ProcessCashPayment(decimal amount)
     {
-        Console.WriteLine("Pago en efectivo procesado.");
+        throw new NotImplementedException();
     }
 
     public void ProcessPaypalPayment(decimal amount)
@@ -16,11 +16,11 @@ public class CashPayment : IPaymentProcessor
 
     public void ProcessCreditCardPayment(decimal amount)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Pago con tarjeta procesado.");
     }
 
     public void validateCreditCard(string cardNumber)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Validación de tarjeta hecha.");
     }
 }
